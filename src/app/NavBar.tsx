@@ -17,9 +17,9 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="main-navbar" />
                 <Navbar.Collapse id="main-navbar">
                     <Nav>
-                        <Nav.Link href="/static" active={pathname === "/static"}>Static</Nav.Link>
-                        <Nav.Link href="/dynamic" active={pathname === "/dynamic"}>Dynamic</Nav.Link>
-                        <Nav.Link href="/isr" active={pathname === "/isr"}>ISR</Nav.Link>
+                        <Nav.Link as={Link} href="/static" active={pathname === "/static"}>Static</Nav.Link>
+                        <Nav.Link as={Link} href="/dynamic" active={pathname === "/dynamic"}>Dynamic</Nav.Link>
+                        <Nav.Link as={Link} href="/isr" active={pathname === "/isr"}>ISR</Nav.Link>
                         <NavDropdown title="Topics" id="topics-dropdown">
                             <NavDropdown.Item as={Link} href="/topics/health">Health
                             </NavDropdown.Item>
@@ -28,6 +28,7 @@ const NavBar = () => {
                             <NavDropdown.Item as={Link} href="/topics/coding">Coding
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link as={Link} href="/search" active={pathname === "/search"}>Search</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
